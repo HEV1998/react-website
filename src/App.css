@@ -1,38 +1,119 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:ital@0;1&display=swap');
+
+body {
+  font-family: 'UnifrakturCook', cursive;
+  background-color: #1a1a1a; /* Dark background color */
+  color: #eaeaea; /* Light text color for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.home-container {
+    background:url(./asessts/XfGb3sgIl6ae46Nq.jpg) no-repeat center center fixed;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 8px;
+}
+header, footer {
+  background-color: #111; /* Very dark background for header and footer */
+  color:  #00adcc;
+  padding: 16px;
   text-align: center;
+  border-bottom: 2px solid #444; /* Subtle border for separation */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1, footer p {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav a {
+  color: #00adcc; 
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+.home-title {
+    font-size: 3em;
+    color: #00adcc;
+    text-shadow: 2px 2px #000; /* Subtle shadow for Gothic effect */
+    text-decoration: underline; /* Underline the text */
+    font-weight: bold; /* Make the text bold */
+  }
+
+  .History-Container { background:url(./asessts/pre_heresy_alpha_legion_by_ilqar-d7631o9.jpg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 8px;
+    font-weight: bold;
+  }
+ .currentstatuscontainer{
+    background:url(./asessts/ec18e1ace20d067bbb2b7d10cbc38bbe.jpg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+.card {
+  background-color: #333; /* Dark background for cards */
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1em;
+}
+
+/* Grid Layout for Content */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling for buttons */
+button {
+  background-color:#00adcc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #00adcc;
 }
