@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:ital@0;1&display=swap');
 
+
 body {
   font-family: 'UnifrakturCook', cursive;
-  background-color: #1a1a1a; /* Dark background color */
-  color: #eaeaea; /* Light text color for contrast */
+  background-color: #000a0a; /* Dark background color */
+  color: #05f3f7; /* Light text color for contrast */
   margin: 0;
   padding: 0;
 }
@@ -15,7 +16,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */               
     border-radius: 8px;
 }
 header, footer {
@@ -91,6 +92,14 @@ nav a:hover {
   gap: 16px;
 }
 
+.fixed-size-img {
+  width: 700px; /* Set the desired width */
+  height: 1100px; /* Set the desired height */
+  object-fit: cover; /* Ensure the image covers the entire area while maintaining its aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -102,7 +111,26 @@ nav a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.gallery-button {
+  background-color: #00adcc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.gallery-button:hover {
+  background-color: #0099b8;
+}
 /* Styling for buttons */
 button {
   background-color:#00adcc;

@@ -26,10 +26,10 @@ function Gallery() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">Gallery</h1>
-      <div className="flex justify-center items-center">
-        <button onClick={prevImage} className="mr-4">Previous</button>
-        <img src={images[currentIndex]} alt="Gallery" className="max-w-full h-auto" />
-        <button onClick={nextImage} className="ml-4">Next</button>
+      <div className="gallery-container">
+        <button onClick={prevImage} className="gallery-button">Previous</button>
+        <img src={images[currentIndex]} alt="Gallery" className="fixed-size-img" />
+        <button onClick={nextImage} className="gallery-button">Next</button>
       </div>
     </div>
   );
