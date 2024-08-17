@@ -9,8 +9,10 @@ import Home from './pages/home';
 import History from './pages/History';
 import Units from './pages/Units';
 import UnitDetails from './components/UnitDetails';
-import Currentstatus from './pages/Currentstatus';
+import CurrentStatus from './pages/Currentstatus';
 import Gallery from './pages/Gallery';
+import NotableMembers from './components/NotableMembers';
+import MemberDetails from './components/MemberDetails';
 
 function App() {
   return (
@@ -20,11 +22,13 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/History" element={<History />} />
-            <Route path="/Units" element={<Units />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/units" element={<Units />} />
             <Route path="/units/:id" element={<UnitDetails />} />
-            <Route path="/Gallery" element={<Gallery />} />
-            <Route path="/Currentstatus" element={<Currentstatus />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/currentstatus" element={<CurrentStatus />} />
+            <Route path="/members" element={<NotableMembers />} />
+            <Route path="/members/:id" element={<MemberDetails />} />
           </Routes>
         </main>
         <Footer />
@@ -34,3 +38,4 @@ function App() {
 }
 
 export default App;
+

@@ -25,10 +25,15 @@ function Home() {
                 <h6 className="home-title"> <Link to="/Currentstatus" style={{ color: 'inherit', textDecoration: 'none' }}>Current status</Link></h6>
                 <p>Learn about the current state of the Alpha Legion and their ongoing battles in the Warhammer 40k universe.</p>
             </div>
+            <div className="bg-gray-800 text-white p-4 rounded">
+                <h7 className="home-title"> <Link to="/members" style={{ color: 'inherit', textDecoration: 'none' }}>Notable Members</Link></h7>
+                <p>Meet some of the most famous and infamous members of the Alpha Legion, from leaders to legendary warriors.</p>
           </div>
+        </div>
         </div>
       </section>
     </div>
+    
   );
 }
 

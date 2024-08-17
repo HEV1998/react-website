@@ -14,6 +14,7 @@ function Header() {
           <Link to="/units" className="mx-2 hover:text-gray-400">Units</Link>
           <Link to="/gallery" className="mx-2 hover:text-gray-400">Gallery</Link>
           <Link to="/currentstatus" className="mx-2 hover:text-gray-400">Current Status</Link>
+          <Link to="/members" className="mx-2 hover:text-gray-400">Notable Members</Link>
         </nav>
       </div>
     </header>

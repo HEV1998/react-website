@@ -42,11 +42,14 @@ nav a:hover {
   text-decoration: underline;
 }
 .home-title {
-    font-size: 3em;
-    color: #00adcc;
-    text-shadow: 2px 2px #000; /* Subtle shadow for Gothic effect */
-    text-decoration: underline; /* Underline the text */
-    font-weight: bold; /* Make the text bold */
+  font-size: 3em;
+  color: #00adcc;
+  text-shadow: 2px 2px #000; /* Subtle shadow for Gothic effect */
+  text-decoration: underline; /* Underline the text */
+  font-weight: bold; /* Make the text bold */
+  width: 100%; /* Ensure each heading takes full width */
+  text-align: center; /* Center align the text */
+  margin: 10px 0; /* Add margin for spacing */
   }
 
   .History-Container { background:url(./asessts/pre_heresy_alpha_legion_by_ilqar-d7631o9.jpg);
