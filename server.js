@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');  // Add this to handle file paths
 const app = express();
 const port = process.env.PORT || 5000;
 const { Pool } = require('pg');
@@ -16,6 +17,9 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
 });
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Endpoint to get all notable members
 app.get('/api/members', async (req, res) => {
@@ -42,6 +46,11 @@ app.get('/api/members/:id', async (req, res) => {
     console.error(err);
     res.status(500).send('Server error');
   }
+});
+
+// The "catchall" handler: for any request that doesn't match the API routes, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 app.listen(port, () => {
