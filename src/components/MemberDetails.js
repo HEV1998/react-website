@@ -7,7 +7,7 @@ function MemberDetails() {
   const [member, setMember] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/members/${id}`)
+    axios.get(`/api/members/${id}`)  // Changed to a relative URL
       .then(response => {
         setMember(response.data);
       })

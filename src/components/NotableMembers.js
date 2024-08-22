@@ -6,7 +6,7 @@ function NotableMembers() {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/members')
+    axios.get('/api/members')  // Changed to a relative URL
       .then(response => {
         setMembers(response.data);
       })
