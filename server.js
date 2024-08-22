@@ -19,7 +19,7 @@ const pool = new Pool({
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Endpoint to get all notable members
 app.get('/api/members', async (req, res) => {
@@ -50,7 +50,7 @@ app.get('/api/members/:id', async (req, res) => {
 
 // The "catchall" handler: for any request that doesn't match the API routes, send back React's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
 app.listen(port, () => {
